@@ -1,0 +1,47 @@
+type Tasks @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  task: String
+  name: String
+  content: String
+}
+
+type Result @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  score: String
+}
+
+type Quiz @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  question: String
+  option1: String
+  option2: String
+  option3: String
+  result: String
+}
+
+type TimeTable @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  course: String
+  lecturer: String
+  details: String
+  date: AWSDate
+  time: AWSTime
+}
+
+type CourseDetails @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  course: String
+  lecturer: String
+  details: String
+  date: AWSDate
+  time: AWSTime
+}
+
+type NavBar @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Home @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+ 
